@@ -28,7 +28,7 @@ const FormHandling = () => {
 
   return (
     <>
-      <div className="h-screen bg-[slateblue] text-center flex flex-col">
+      <div className="text-center flex flex-col items-center justify-center h-screen bg-[slateblue] ">
         <h2 className="text-3xl font-bold text-[whitesmoke] mt-8">Form</h2>
         <form
           className="form  self-center bg-[#fefefe] text-center w-fit mt-4 rounded-2xl"

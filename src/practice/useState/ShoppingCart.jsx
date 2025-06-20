@@ -54,7 +54,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div className="bg-[azure] text-center h-screen">
+    <div className="bg-[azure] text-center flex flex-col items-center justify-center h-screen">
       <h2 className="font-bold text-3xl text-cyan-800">Shopping Cart</h2>
 
       <div className="cart-box flex flex-col justify-self-center text-start bg-[lavenderblush] mt-8 p-8">
