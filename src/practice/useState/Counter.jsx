@@ -19,13 +19,13 @@ const Counter = () => {
   };
 
   return (
-    <div className="counter section">
-      <h2>Counter</h2>
-      <div className="counter-box">
+    <div className="h-screen bg-[skyblue] text-[darkslategrey] text-center p-4 ">
+      <h2 className="text-3xl font-bold text-gray-800">Counter</h2>
+      <div className="flex justify-center mt-8">
         <Button bgColor="darkcyan" onClick={decrement}>
           -
         </Button>
-        <div className="counter-display">{count}</div>
+        <div className="counter-display text-[2rem] px-8 py-0">{count}</div>
         <Button bgColor="darkcyan" onClick={increment}>
           +
         </Button>
@@ -33,6 +33,7 @@ const Counter = () => {
       <br />
       <label htmlFor="">Enter the step: </label>
       <input
+        className="p-[0.2rem] bg-blue-50"
         type="number"
         value={num}
         min={0}

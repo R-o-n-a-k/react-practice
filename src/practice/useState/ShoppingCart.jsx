@@ -54,17 +54,21 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div className="shoppingCart section">
-      <h2>Shopping Cart</h2>
+    <div className="bg-[azure] text-center h-screen">
+      <h2 className="font-bold text-3xl text-cyan-800">Shopping Cart</h2>
 
-      <div className="cart-box">
+      <div className="cart-box flex flex-col justify-self-center text-start bg-[lavenderblush] mt-8 p-8">
         <div className="cart-count">🛒: {totalItems} </div>
         {products.map((item) => (
-          <div className="cart-product" key={item.id}>
+          <div
+            className="cart-product flex w-[30rem] justify-between mt-4"
+            key={item.id}
+          >
             <p>{item.name}</p>
-            <div className="product">
+            <div className="product flex gap-4">
               <div className="quantity">
                 <Button
+                  className="mx-2 my-0"
                   size="small"
                   bgColor="gray"
                   onClick={() => handleDecrement(item.id)}
@@ -73,7 +77,7 @@ const ShoppingCart = () => {
                 </Button>
                 <span>{item.quantity}</span>
                 <Button
-                  size="small"
+                  size="small mx-2 my-0"
                   bgColor="gray"
                   onClick={() => handleIncrement(item.id)}
                 >
@@ -96,8 +100,8 @@ const ShoppingCart = () => {
           Checkout
         </Button>
         {isModalOpen && (
-          <div className="modal-overlay">
-            <div className="modal">
+          <div className="modal-overlay fixed w-full h-full bg-black/60 flex items-center justify-center z-[999] left-0 top-0">
+            <div className="modal bg-white w-[300px] text-left shadow-lg px-[30px] py-5 rounded-lg">
               <h3>Cart Summary</h3>
               <div className="checkout-summary">
                 <pre>{checkoutSummary}</pre>

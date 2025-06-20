@@ -1,4 +1,3 @@
-import "./App.css";
 import UseEffect from "./practice/useEffect/UseEffect";
 import UseState from "./practice/useState/UseState";
 

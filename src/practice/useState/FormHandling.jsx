@@ -28,12 +28,16 @@ const FormHandling = () => {
 
   return (
     <>
-      <div className="formHandling section">
-        <h2 className="title">Form</h2>
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="form-data">
+      <div className="h-screen bg-[slateblue] text-center flex flex-col">
+        <h2 className="text-3xl font-bold text-[whitesmoke] mt-8">Form</h2>
+        <form
+          className="form  self-center bg-[#fefefe] text-center w-fit mt-4 rounded-2xl"
+          onSubmit={handleSubmit}
+        >
+          <div className="form-data flex justify-around p-4">
             <label htmlFor="name">Full Name </label>
             <input
+              className="p-[0.2rem] border-2 border-solid border-[cornflowerblue]"
               type="text"
               name="name"
               value={formdata.name}
@@ -44,9 +48,10 @@ const FormHandling = () => {
             />
           </div>
 
-          <div className="form-data">
+          <div className="form-data flex justify-around p-4">
             <label htmlFor="email">Email</label>
             <input
+              className="p-[0.2rem] border-2 border-solid border-[cornflowerblue]"
               type="email"
               name="email"
               value={formdata.email}
@@ -56,9 +61,10 @@ const FormHandling = () => {
               required
             />
           </div>
-          <div className="form-data">
+          <div className="form-data flex justify-around p-4">
             <label htmlFor="pswd">Pswd </label>
             <input
+              className="p-[0.2rem] border-2 border-solid border-[cornflowerblue]"
               type="password"
               name="pswd"
               value={formdata.pswd}
@@ -71,9 +77,10 @@ const FormHandling = () => {
               required
             />
           </div>
-          <div className="form-data">
+          <div className="form-data flex justify-around p-4">
             <label htmlFor="number">Phone </label>
             <input
+              className="p-[0.2rem] border-2 border-solid border-[cornflowerblue]"
               type="number"
               name="phone"
               value={formdata.phone}
@@ -86,9 +93,10 @@ const FormHandling = () => {
               required
             />
           </div>
-          <div className="form-data">
+          <div className="form-data flex justify-around p-4">
             <label htmlFor="date">Birthday </label>
             <input
+              className="p-[0.2rem] border-2 border-solid border-[cornflowerblue]"
               type="date"
               name="date"
               value={formdata.date}
@@ -98,10 +106,11 @@ const FormHandling = () => {
               required
             />
           </div>
-          <div className="form-data">
+          <div className="form-data flex justify-around p-4">
             <label htmlFor="color">Fav Color </label>
 
             <input
+              className="p-[0.2rem] border-2 border-solid border-[cornflowerblue]"
               type="color"
               name="color"
               value={formdata.color}
@@ -109,16 +118,16 @@ const FormHandling = () => {
               id="color"
             />
           </div>
-          <div className="form-data">
+          <div className="form-data flex justify-around p-4">
             <Button type="submit">Submit</Button>
           </div>
         </form>
 
         {isModalOpen && (
-          <div className="modal-overlay">
-            <div className="modal">
-              <h3>Submitted Data</h3>
-              <ul>
+          <div className="fixed w-full h-full bg-black/60 flex items-center justify-center z-[999] left-0 top-0">
+            <div className="bg-white w-[300px] text-left shadow-lg px-[30px] py-5 rounded-lg">
+              <h3 className="mt-0 mb-2.5">Submitted Data</h3>
+              <ul className="mb-5 pl-5">
                 <li>
                   <strong>Name:</strong> {formdata.name}
                 </li>
